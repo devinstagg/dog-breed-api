@@ -9,6 +9,7 @@ const isValidDogBreed = (dogBreed) => {
 }
 
 router.get('/', async (req,res) => {
+  console.log('called get')
   const allDogBreeds = await dataAccessLayer.getAllBreeds()
   res.send(allDogBreeds)
 })

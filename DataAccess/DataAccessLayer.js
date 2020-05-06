@@ -6,7 +6,7 @@ const getConnectedClient = async () => {
     return await client.connect()
 }
 
-const getAllBreedsCollection = async () => {
+const getAllBreedsCollection = async (client) => {
     return await client.db("dog-breeds").collection("all-breeds")
 }
 
