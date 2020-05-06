@@ -5,6 +5,7 @@ const dataAccessLayer = require("../DataAccess/DataAccessLayer.js")
 
 const isValidDogBreed = (dogBreed) => {
   const hasValidBreed = !!dogBreed.breed
+  return hasValidBreed
 }
 
 router.get('/', async (req,res) => {
@@ -46,8 +47,6 @@ router.delete('/:id', async (req,res) => {
 
   res.send(dogBreedId)
 })
-
-
 
 
 module.exports = router;
